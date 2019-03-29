@@ -1,0 +1,72 @@
+#todo-app > div {
+    margin-bottom: 10px;
+}
+#todo-app{
+    display:flex;
+    flex-flow: column;
+    padding:5px;
+    #add-todo{
+        textarea{
+            width:100%;
+            height:50px;
+        }   
+    }
+    #action-history-list{
+        table{
+            margin-top: 5px;
+            width:100%;
+            thead{
+                tr{
+                    background:grey;
+                }
+            }
+            tr{
+                background:#cfcfcf;
+            }
+            td{
+                padding: 5px;
+            }
+        }
+    }
+    .todo-list, #add-todo, #action-history-list{
+        border:1px solid grey;
+        padding: 10px;
+    }
+    .todo-list, #action-history-list{
+        :last-child{
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        .list-header{
+            display:flex;
+            justify-content: space-between;
+            border-bottom: 1px solid grey;
+            padding-bottom: 5px;
+        }
+    }
+    .todo-row textarea, 
+    .todo-row span, 
+    .todo-row button, 
+    #add-todo button{
+        padding:5px 10px;
+    }
+    .todo-row{
+        margin: 5px 0px;
+        display:flex;
+        align-items: center;
+        .todo, textarea {
+            width:80%;
+            padding-left: 0px;
+        }
+        textarea{
+            background-color: blanchedalmond;
+        }
+        .todo.done{
+            color:grey;
+            background: rgba(255, 0, 0, 0.2);
+        }
+        :first-child{
+            padding-left:0px;
+        }
+    }
+}
